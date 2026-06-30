@@ -1,9 +1,35 @@
 stages:
+  - build
   - test
+  - deploy
+
+variables:
+  APP_NAME: "my_project"
+
+build-job:
+  stage: build
+  script:
+    - echo "Building the application..."
+    - mkdir -p build
+    - echo "Build completed at $(date)" > build/info.txt
+  artifacts:
+    paths:
+      - build/
 
 test-job:
   stage: test
   script:
-    - echo "Hello from GitLab Runner!"
-    - whoami
-    - pwd
+    - echo "Running tests..."
+    - echo "All tests passed successfully!"
+  dependencies:
+    - build-job
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying the application..."
+    - echo "Deployment completed at $(date)"
+  dependencies:
+    - build-job
+  only:
+    - main
