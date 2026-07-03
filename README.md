@@ -45,8 +45,7 @@
 ### Задание 2: Создание и запуск CI/CD пайплайна
 
 #### Скриншоты:
-
-![result](screenshots/result.PNG)
+![213](img/213.PNG)
 
 #### Файл `.gitlab-ci.yml`:
 
