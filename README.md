@@ -32,14 +32,21 @@
 
 #### Скриншоты:
 ##### Настройки раннера в проекте:
-![Раннер в проекте](screenshots/runner-settings.png)
+![Раннер в проекте](img/100.PNG)
 
 ##### Статус раннера (online):
-![online_runner](screenshots/online_runner.png)
+![online_runner](img/online_runner.PNG)
+
+##### Res:
+![online_runner](img/200.PNG)
 
 ---
 
 ### Задание 2: Создание и запуск CI/CD пайплайна
+
+#### Скриншоты:
+
+![result](screenshots/result.PNG)
 
 #### Файл `.gitlab-ci.yml`:
 
@@ -79,7 +86,3 @@ deploy-job:
     - build-job
   only:
     - main
-
-#### Скриншоты:
-
-![result](screenshots/result.png)
